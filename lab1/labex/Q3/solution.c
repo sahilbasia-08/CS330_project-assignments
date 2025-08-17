@@ -11,12 +11,13 @@ int main(int argc, char *argv[])
     buffer_init(atoi(argv[1]));
     const struct ring_buffer *rb = buffer_get_base();
 
-    void *base = rb->data_base;
+    char *base = (char *)rb->data_base;
     uint64_t tail = rb->data_tail;
     uint64_t head = rb->data_head;
     uint64_t size = rb->data_size;
     uint64_t unknown_events = 0;
     uint64_t lost_event = 0;
+    // head = head & (size - 1);
     while (tail < head)
     {
         // since its a ring buffer () in circle we will wrap around our start point with the help of size valie
@@ -35,14 +36,17 @@ int main(int argc, char *argv[])
         {
             // do print the things needed
             struct sample_event *ptr1 = (struct sample_event *)(ptr);
-            printf("0x%llu", ptr1->addr);
+            printf("0x%llx \n", ptr1->addr);
         }
         else
         {
             // anonymous events
-            unknown_events++;
+            unknown_events += ptr->size;
         }
+        tail += ptr->size;
     }
+    printf("number of lost records: %llu\n", (unsigned long long)lost_event);
+    printf("unknown size: %llu\n", (unsigned long long)unknown_events);
     /* ------ YOUR CODE ENDS HERE ------*/
 
     /* print formats */

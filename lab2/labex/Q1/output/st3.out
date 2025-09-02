@@ -1,0 +1,61 @@
+20347 execve("./pprime", ["./pprime", "50000", "3"], 0x7ffea285f028 /* 32 vars */) = 0
+20347 brk(NULL)                         = 0x58ee33d4c000
+20347 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x799f79c57000
+20347 access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+20347 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+20347 fstat(3, {st_mode=S_IFREG|0644, st_size=102079, ...}) = 0
+20347 mmap(NULL, 102079, PROT_READ, MAP_PRIVATE, 3, 0) = 0x799f79c3e000
+20347 close(3)                          = 0
+20347 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+20347 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+20347 fstat(3, {st_mode=S_IFREG|0644, st_size=952616, ...}) = 0
+20347 mmap(NULL, 950296, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x799f79b55000
+20347 mmap(0x799f79b65000, 520192, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x10000) = 0x799f79b65000
+20347 mmap(0x799f79be4000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8f000) = 0x799f79be4000
+20347 mmap(0x799f79c3c000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe7000) = 0x799f79c3c000
+20347 close(3)                          = 0
+20347 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+20347 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832
+20347 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+20347 fstat(3, {st_mode=S_IFREG|0755, st_size=2125328, ...}) = 0
+20347 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+20347 mmap(NULL, 2170256, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x799f79800000
+20347 mmap(0x799f79828000, 1605632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x799f79828000
+20347 mmap(0x799f799b0000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b0000) = 0x799f799b0000
+20347 mmap(0x799f799ff000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1fe000) = 0x799f799ff000
+20347 mmap(0x799f79a05000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x799f79a05000
+20347 close(3)                          = 0
+20347 mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x799f79b52000
+20347 arch_prctl(ARCH_SET_FS, 0x799f79b52740) = 0
+20347 set_tid_address(0x799f79b52a10)   = 20347
+20347 set_robust_list(0x799f79b52a20, 24) = 0
+20347 rseq(0x799f79b53060, 0x20, 0, 0x53053053) = 0
+20347 mprotect(0x799f799ff000, 16384, PROT_READ) = 0
+20347 mprotect(0x799f79c3c000, 4096, PROT_READ) = 0
+20347 mprotect(0x58ee202e5000, 4096, PROT_READ) = 0
+20347 mprotect(0x799f79c8f000, 8192, PROT_READ) = 0
+20347 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+20347 munmap(0x799f79c3e000, 102079)    = 0
+20347 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x799f79b52a10) = 20348
+20348 set_robust_list(0x799f79b52a20, 24 <unfinished ...>
+20347 wait4(20348,  <unfinished ...>
+20348 <... set_robust_list resumed>)    = 0
+20348 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+20349 set_robust_list(0x799f79b52a20, 24 <unfinished ...>
+20348 <... clone resumed>, child_tidptr=0x799f79b52a10) = 20349
+20349 <... set_robust_list resumed>)    = 0
+20349 exit_group(202)                   = ?
+20349 +++ exited with 202 +++
+20348 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=20349, si_uid=1000, si_status=202, si_utime=0, si_stime=0} ---
+20348 wait4(20349, [{WIFEXITED(s) && WEXITSTATUS(s) == 202}], 0, NULL) = 20349
+20348 exit_group(13)                    = ?
+20348 +++ exited with 13 +++
+20347 <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 13}], 0, NULL) = 20348
+20347 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=20348, si_uid=1000, si_status=13, si_utime=0, si_stime=0} ---
+20347 fstat(1, {st_mode=S_IFREG|0644, st_size=145, ...}) = 0
+20347 getrandom("\x85\x66\xb5\x38\xea\xf8\x20\x02", 8, GRND_NONBLOCK) = 8
+20347 brk(NULL)                         = 0x58ee33d4c000
+20347 brk(0x58ee33d6d000)               = 0x58ee33d6d000
+20347 write(1, "Testcase 3 Expected: 13 Output: "..., 72) = 72
+20347 exit_group(0)                     = ?
+20347 +++ exited with 0 +++

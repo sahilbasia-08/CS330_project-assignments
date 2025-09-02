@@ -1,0 +1,59 @@
+20335 execve("./pprime", ["./pprime", "5000", "2"], 0x7ffc4f950448 /* 32 vars */) = 0
+20335 brk(NULL)                         = 0x5a46b558e000
+20335 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x71c9087e5000
+20335 access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+20335 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+20335 fstat(3, {st_mode=S_IFREG|0644, st_size=102079, ...}) = 0
+20335 mmap(NULL, 102079, PROT_READ, MAP_PRIVATE, 3, 0) = 0x71c9087cc000
+20335 close(3)                          = 0
+20335 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+20335 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+20335 fstat(3, {st_mode=S_IFREG|0644, st_size=952616, ...}) = 0
+20335 mmap(NULL, 950296, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x71c9086e3000
+20335 mmap(0x71c9086f3000, 520192, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x10000) = 0x71c9086f3000
+20335 mmap(0x71c908772000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8f000) = 0x71c908772000
+20335 mmap(0x71c9087ca000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe7000) = 0x71c9087ca000
+20335 close(3)                          = 0
+20335 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+20335 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832
+20335 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+20335 fstat(3, {st_mode=S_IFREG|0755, st_size=2125328, ...}) = 0
+20335 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+20335 mmap(NULL, 2170256, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x71c908400000
+20335 mmap(0x71c908428000, 1605632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x71c908428000
+20335 mmap(0x71c9085b0000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b0000) = 0x71c9085b0000
+20335 mmap(0x71c9085ff000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1fe000) = 0x71c9085ff000
+20335 mmap(0x71c908605000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x71c908605000
+20335 close(3)                          = 0
+20335 mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x71c9086e0000
+20335 arch_prctl(ARCH_SET_FS, 0x71c9086e0740) = 0
+20335 set_tid_address(0x71c9086e0a10)   = 20335
+20335 set_robust_list(0x71c9086e0a20, 24) = 0
+20335 rseq(0x71c9086e1060, 0x20, 0, 0x53053053) = 0
+20335 mprotect(0x71c9085ff000, 16384, PROT_READ) = 0
+20335 mprotect(0x71c9087ca000, 4096, PROT_READ) = 0
+20335 mprotect(0x5a46b050d000, 4096, PROT_READ) = 0
+20335 mprotect(0x71c90881d000, 8192, PROT_READ) = 0
+20335 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+20335 munmap(0x71c9087cc000, 102079)    = 0
+20335 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x71c9086e0a10) = 20336
+20335 wait4(20336,  <unfinished ...>
+20336 set_robust_list(0x71c9086e0a20, 24) = 0
+20336 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x71c9086e0a10) = 20337
+20337 set_robust_list(0x71c9086e0a20, 24) = 0
+20336 wait4(20337,  <unfinished ...>
+20337 exit_group(111)                   = ?
+20337 +++ exited with 111 +++
+20336 <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 111}], 0, NULL) = 20337
+20336 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=20337, si_uid=1000, si_status=111, si_utime=0, si_stime=0} ---
+20336 exit_group(157)                   = ?
+20336 +++ exited with 157 +++
+20335 <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 157}], 0, NULL) = 20336
+20335 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=20336, si_uid=1000, si_status=157, si_utime=0, si_stime=0} ---
+20335 fstat(1, {st_mode=S_IFREG|0644, st_size=71, ...}) = 0
+20335 getrandom("\x6e\xb9\xbf\x6d\x65\x1f\x3b\xe0", 8, GRND_NONBLOCK) = 8
+20335 brk(NULL)                         = 0x5a46b558e000
+20335 brk(0x5a46b55af000)               = 0x5a46b55af000
+20335 write(1, "Testcase 2 Expected: 157 Output:"..., 74) = 74
+20335 exit_group(0)                     = ?
+20335 +++ exited with 0 +++
